@@ -102,7 +102,7 @@ class Service {
         for (String song : songs) {
             if (fileNotExists(currentSongs, song)) {
                 File file = new File(System.getProperty("user.dir") + "/storage/songs/" + song);
-                File newFile = new File(System.getProperty("user.dir") + "/storage/songs/" + song);
+                File newFile = new File(System.getProperty("user.dir") + "/storage/old/" + song);
                 if (file.renameTo(newFile)) {
                     System.out.println("file moved " + song);
                 }
